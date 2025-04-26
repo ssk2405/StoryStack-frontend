@@ -18,7 +18,7 @@ const ViewBook = () => {
     useEffect(() => {
         const fetchBook = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/v1/get-book-by-id/${id}`);
+                const response = await axios.get(`https://backend-j6ni.onrender.com/api/v1/get-book-by-id/${id}`);
                 setData(response.data?.data || null);
             } catch (error) {
                 console.error("Error fetching data:", error);
@@ -37,7 +37,7 @@ const ViewBook = () => {
 
     const setfav = async () => {
         try {
-            const response = await axios.put("http://localhost:3000/api/v1/add-book-to-fav", {}, { headers });
+            const response = await axios.put("https://backend-j6ni.onrender.com/api/v1/add-book-to-fav", {}, { headers });
             alert( response.data.message);
         } catch (error) {
             console.error("Error adding to favourites:", error);
@@ -45,7 +45,7 @@ const ViewBook = () => {
     };
  const setCart= async() =>{
     try {
-        const response = await axios.put("http://localhost:3000/api/v1/add-to-cart", {}, { headers });
+        const response = await axios.put("https://backend-j6ni.onrender.com/api/v1/add-to-cart", {}, { headers });
         alert( response.data.message);
     } catch (error) {
         console.error("Error adding to cart:", error);
@@ -54,7 +54,7 @@ const ViewBook = () => {
  const deleteBook=async()=>{
     try
         {
-            const res=await axios.delete("http://localhost:3000/api/v1/delete-book", {headers}
+            const res=await axios.delete("https://backend-j6ni.onrender.com/api/v1/delete-book", {headers}
 
             )
        alert(res.data.message);

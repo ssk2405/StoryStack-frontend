@@ -16,7 +16,7 @@ function Profile() {
   useEffect(() => {
     const fetchProfile = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/get-user-data", { headers });
+        const response = await axios.get("https://backend-j6ni.onrender.com/api/v1/get-user-data", { headers });
         setProfile(response.data || null);  // safe fallback
       } catch (error) {
         console.error("Error fetching profile data:", error);

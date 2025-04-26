@@ -50,7 +50,7 @@ const UpdateBook = () => {
             alert("All feilds Required");
         }
         else{
-            const res=await axios.put("http://localhost:3000/api/v1/update-book",Data,{headers});
+            const res=await axios.put("https://backend-j6ni.onrender.com/api/v1/update-book",Data,{headers});
             setData({
                 url:"",
                 title:"",
@@ -69,7 +69,7 @@ const UpdateBook = () => {
      useEffect(() => {
         const fetchBook = async () => {
             try {
-                const response = await axios.get(`http://localhost:3000/api/v1/get-book-by-id/${id}`);
+                const response = await axios.get(`https://backend-j6ni.onrender.com/api/v1/get-book-by-id/${id}`);
                 setData(response.data?.data || null);
             } catch (error) {
                 console.error("Error fetching data:", error);

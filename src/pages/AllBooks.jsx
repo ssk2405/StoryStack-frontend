@@ -9,7 +9,7 @@ function AllBooks() {
     useEffect(() => {
         const fetch = async () => {
             try {
-                const response = await axios.get("http://localhost:3000/api/v1/get-all-books");
+                const response = await axios.get("https://backend-j6ni.onrender.com/api/v1/get-all-books");
                 setData(response.data?.data || []); // Handle undefined response
             } catch (error) {
                 console.error("Error fetching data:", error);

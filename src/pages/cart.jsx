@@ -17,7 +17,7 @@ function Cart() {
   useEffect(() => {
     const fetchCart = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/get-user-cart", { headers });
+        const res = await axios.get("https://backend-j6ni.onrender.com/api/v1/get-user-cart", { headers });
         setCart(res.data.data);
       } catch (error) {
         console.error("Error fetching cart items:", error);
@@ -29,7 +29,7 @@ function Cart() {
   const deleteItem = async (bookId) => {
     try {
       const response = await axios.put(
-        `http://localhost:3000/api/v1/remove-book-from-cart/${bookId}`,
+        `https://backend-j6ni.onrender.com/api/v1/remove-book-from-cart/${bookId}`,
         {},
         { headers }
       );
@@ -50,7 +50,7 @@ function Cart() {
   const placeOrder = async () => {
     try {
       const response = await axios.post(
-        `http://localhost:3000/api/v1/place-order`,
+        `https://backend-j6ni.onrender.com/api/v1/place-order`,
         { order: cart },
         { headers }
       );

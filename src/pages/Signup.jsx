@@ -23,7 +23,7 @@ function Signup() {
     }
   
     try {
-      const response = await axios.post('http://localhost:3000/api/v1/sign-up', Value);
+      const response = await axios.post('https://backend-j6ni.onrender.com/api/v1/sign-up', Value);
       alert("Signup successful:", response.data);
   
       navigate("/login"); // Redirect after successful signup

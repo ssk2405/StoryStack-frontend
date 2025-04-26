@@ -14,7 +14,7 @@ const UserOrderHistory = () => {
   useEffect(() => {
     const fetchOrder = async () => {
       try {
-        const res = await axios.get("http://localhost:3000/api/v1/get-order-history", { headers });
+        const res = await axios.get("https://backend-j6ni.onrender.com/api/v1/get-order-history", { headers });
         console.log(res.data.data);
         setOrderHistory(res.data.data);
       } catch (err) {

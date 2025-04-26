@@ -21,7 +21,7 @@ const AllOrders = () => {
 
     useEffect(() => {
         const fetch = async () => {
-            const res = await axios.get("http://localhost:3000/api/v1/get-all-order", { headers });
+            const res = await axios.get("https://backend-j6ni.onrender.com/api/v1/get-all-order", { headers });
             setAllOeders(res.data.data);
         };
         fetch();
@@ -31,7 +31,7 @@ const AllOrders = () => {
         const id = AllOrders[i]._id;  
         try {
             const res = await axios.put(
-                `http://localhost:3000/api/v1/upadte-data/${id}`, 
+                `https://backend-j6ni.onrender.com/api/v1/upadte-data/${id}`, 
                 { status: selectedStatus },
                 { headers }
             );

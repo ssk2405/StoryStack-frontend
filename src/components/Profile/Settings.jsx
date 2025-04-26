@@ -15,7 +15,7 @@ const Settings = () =>
  }
  useEffect(()=>{
   const fetch= async()=>{
-    const res= await axios.get("http://localhost:3000/api/v1/get-user-data", {headers}
+    const res= await axios.get("https://backend-j6ni.onrender.com/api/v1/get-user-data", {headers}
     );
     setProfileData(res.data);
     setValue({address: res.data.address})
@@ -23,7 +23,7 @@ const Settings = () =>
   fetch()
  },[])
  const submitAddress=async()=>{
-  const res= await axios.put("http://localhost:3000/api/v1/update-address",
+  const res= await axios.put("https://backend-j6ni.onrender.com/api/v1/update-address",
     Value,{headers}
   );
   alert(res.data.message);

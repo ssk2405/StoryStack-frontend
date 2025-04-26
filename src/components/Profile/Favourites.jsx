@@ -14,7 +14,7 @@ const Favourites = () => {
   useEffect(() => {
     const fetchFavourites = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/v1/get-fav-book", { headers });
+        const response = await axios.get("https://backend-j6ni.onrender.com/api/v1/get-fav-book", { headers });
         setFavouriteBooks(response.data.data || []);
       } catch (error) {
         console.error("Error fetching favourite books:", error);
