@@ -34,7 +34,7 @@ const MobileNav = () => {
                 All Orders
               </Link>
               <Link
-                to="/profile/orderHistory"
+                to="/profile/add-book"
                 className="text-zinc-100 font-semibold w-full text-center hover:bg-blue-500 rounded transition-all duration-300"
               >
                 Add Book
